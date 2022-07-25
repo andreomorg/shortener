@@ -26,7 +26,7 @@ This API aims to demonstrate the use of URL Shortener in Ruby on Rails.
 
 ### Request
 
-`POST /original_to_short/`
+`POST /original_to_short/:original_url`
 
 
 ## Get a original url from short url
