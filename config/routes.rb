@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   get '/all_urls', to: 'url#show'
+  get 'short_to_original(/:short_url)', to: 'url#short_to_original'
   post '/original_to_short/', to: 'url#original_to_short'
-  post '/short_to_original/', to: 'url#short_to_original'
 end

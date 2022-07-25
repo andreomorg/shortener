@@ -1,5 +1,6 @@
 class Url < ApplicationRecord
-  validate :original_url, :short_url, :original_url_formated?
+  validates :original_url, :short_url, presence: true
+  validate :original_url_formated?
 
   private
 

@@ -28,7 +28,7 @@ RSpec.describe UrlController, type: :controller do
       end
 
       it 'then return a original URL' do
-        post 'short_to_original', :params => {:short_url => short_url}
+        get 'short_to_original', :params => {:short_url => short_url}
         expect(response).to have_http_status(:ok)
         expect(response.body).to include('original_url')
       end
@@ -36,7 +36,7 @@ RSpec.describe UrlController, type: :controller do
 
     context 'when short url doesnt exist' do
       it 'then return a unprocess entity' do
-        post 'short_to_original', :params => {:short_url => short_url}
+        get 'short_to_original', :params => {:short_url => short_url}
         expect(response).to have_http_status(:unprocessable_entity)
         expect(response.body).to eq('{}')
       end

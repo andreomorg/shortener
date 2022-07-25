@@ -1,24 +1,36 @@
-# README
+This API aims to demonstrate the use of URL Shortener in Ruby on Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Install
 
-* Ruby version
+    bundle install
 
-* System dependencies
+## Run the app
 
-* Configuration
+    rails s
 
-* Database creation
+## Run the tests
 
-* Database initialization
+    rspec
 
-* How to run the test suite
+# REST API
 
-* Services (job queues, cache servers, search engines, etc.)
+## Get list of URL's
 
-* Deployment instructions
+### Request
 
-* ...
+`GET /all_urls/`
+
+
+## Create a new URL Shortener
+
+### Request
+
+`POST /original_to_short/`
+
+
+## Get a original url from short url
+
+### Request
+
+`GET /short_to_original/:short_url`
